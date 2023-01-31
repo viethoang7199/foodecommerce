@@ -14,6 +14,8 @@ import Loading from '../components/UI/Loading';
 import { db } from '../firebase';
 import { cartSlice } from '../store/Slice/cartSlice';
 
+import useAuth from '../CustomHook/useAuth'
+
 
 const Checkout = () => {
 
@@ -41,11 +43,6 @@ const Checkout = () => {
         notes: ''
     })
 
-    const pImg = cartList.map(item => item.image)
-    const pName = cartList.map(item => item.productName);
-    const pPrice = cartList.map(item => item.price);
-    const pQuantity = cartList.map(item => item.quantity);
-
     const information = {
         id: nanoid(),
         fullName: formVal.fullName,
@@ -66,15 +63,19 @@ const Checkout = () => {
     const shipingCost = 2.00
     const placeOrder = async () => {
         setLoading(true)
-        await setDoc(doc(db, 'orders', information.id), {
-            information,
-            cartList,
-            // products: cartList,
-            status: 'wait for confirmation',
-            totalPrice: totalAmount + shipingCost
-        })
-        setLoading(false)
-        toast.success('Order Successfullyyyyyyyyyyyyyyy!');
+        try {
+            await setDoc(doc(db, 'orders', information.id), {
+                information,
+                products: cartList,
+                status: 'Wait confirm',
+                totalPrice: totalAmount + shipingCost
+            })
+            toast.success('Order Successfullyyyyyyyyyyyyyyy!');
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
+            toast.error(error.message)
+        }
     }
 
     useEffect(() => {
@@ -92,6 +93,9 @@ const Checkout = () => {
     //     }
     //     fetchDataCity();
     // }, [])
+
+    const { currentUser } = useAuth();
+
     return (
         <>
             {loading && <Loading />}
@@ -109,10 +113,10 @@ const Checkout = () => {
                                             <label htmlFor="fullName" className="block mb-3 text-sm font-semibold text-gray-500">Full Name</label>
                                             <InputText
                                                 className="w-full px-4 py-3 text-sm border !border-dark-gray rounded lg:text-sm"
-                                                name="fullName"
+                                                name="currentUser.displayName"
                                                 type="text"
                                                 placeholder="Full Name"
-                                                value={formVal.fullName}
+                                                value={currentUser ? currentUser.displayName : formVal.fullName}
                                                 onChange={handleChangeFields}
                                             />
                                         </div>
@@ -137,7 +141,7 @@ const Checkout = () => {
                                                 name="email"
                                                 type="text"
                                                 placeholder="Email"
-                                                value={formVal.email}
+                                                value={currentUser ? currentUser.email : formVal.email}
                                                 onChange={handleChangeFields}
                                             />
                                         </div>

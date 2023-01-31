@@ -1,6 +1,6 @@
 import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
-import { BsCalendar3, BsEnvelope, BsFillPencilFill, BsPerson, BsStarFill, BsStarHalf } from 'react-icons/bs';
+import { BsEnvelope, BsFillPencilFill, BsPerson, BsStarFill, BsStarHalf } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -41,7 +41,7 @@ const ProductDetail = () => {
     }, [docRef])
 
 
-    const { image, productName, price, category, avgRating, discounted, description, reviews } = product;
+    const { image, productName, price, category, avgRating, discounted, description } = product;
     const related = products.filter(item => item.category === category)
 
     const handleAddToCart = (item) => {
@@ -229,7 +229,7 @@ const ProductDetail = () => {
                                             </div>
                                         </div>
                                         <div className='mt-5 text-center'>
-                                            <ButtonCommon name='Post review' />
+                                            <ButtonCommon name='Coming Soon!' />
                                         </div>
                                     </form>
                                 </div>}
