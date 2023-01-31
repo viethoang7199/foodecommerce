@@ -1,0 +1,32 @@
+.product__list__slide {
+  .slick-slide > div {
+    margin: 0 0.625rem;
+  }
+  .slick-list {
+    margin: 0 -0.625rem;
+    padding: 20px 0;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    &::before {
+      font-size: 34px;
+      line-height: 1.5;
+    }
+    &:hover {
+      background-color: var(--pink);
+    }
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .slick-prev {
+    left: -30px !important;
+  }
+  .slick-next {
+    right: -30px !important;
+  }
+}

@@ -1,0 +1,852 @@
+{
+  "products": [
+    {
+      "id": "01",
+      "productName": "Beefy pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fbeef.png?alt=media&token=d72b5fe0-7ffa-47d1-876c-bcc6314f9148",
+      "category": "pizza",
+      "price": 11.99,
+      "discounted": 9.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provient! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.5,
+      "sold": 1200
+    },
+    {
+      "id": "02",
+      "productName": "Hawaii pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fhawaii.png?alt=media&token=37168b23-aabe-4050-9a68-ec10550edf3a",
+      "category": "pizza",
+      "price": 14.99,
+      "discounted": 10.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provent! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.7,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 1300
+    },
+    {
+      "id": "03",
+      "productName": "Salami pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fsalami.png?alt=media&token=a36db18a-0343-4080-be38-a68bb4955d4d",
+      "category": "pizza",
+      "price": 7.99,
+      "discounted": "",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 900
+    },
+    {
+      "id": "04",
+      "productName": "Chorito pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fchorizo.png?alt=media&token=e873434e-d118-4a47-b8a8-d0a6c459cf1b",
+      "category": "pizza",
+      "price": 8.99,
+      "discounted": 5.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 970
+    },
+    {
+      "id": "05",
+      "productName": "Mexican pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fmexican.png?alt=media&token=d7629242-d122-457a-9b48-632a9a1d98fb",
+      "category": "pizza",
+      "price": 18.99,
+      "discounted": "",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 1100
+    },
+    {
+      "id": "06",
+      "productName": "Seafood pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fseafood.png?alt=media&token=8046d662-ffbe-412d-9209-af266c9b84af",
+      "category": "pizza",
+      "price": 14.99,
+      "discounted": 10.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 560
+    },
+    {
+      "id": "07",
+      "productName": "Veggie pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fveggie.png?alt=media&token=a1441c33-5f2d-4428-89d5-26bb8e09e2fc",
+      "category": "pizza",
+      "price": 6.99,
+      "discounted": 5.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 700
+    },
+    {
+      "id": "08",
+      "productName": "Margherita pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fpizza%2Fmargherita.png?alt=media&token=fb12ba53-0053-47e9-a635-e2152eb4e816",
+      "category": "pizza",
+      "price": 12.99,
+      "discounted": 10.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 1400
+    },
+    {
+      "id": "09",
+      "productName": "spaghetti shrimp",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fspaghetti%2Fshrimp.png?alt=media&token=e60dffde-1d9c-46b3-aeaf-1f5ed0cfd952",
+      "category": "spaghetti",
+      "price": 6.99,
+      "discounted": 5.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provient! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 1200
+    },
+    {
+      "id": "10",
+      "productName": "spaghetti seafood",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fspaghetti%2Fseafood.png?alt=media&token=ec180888-8bed-4c4d-8247-0645d50418a7",
+      "category": "spaghetti",
+      "price": 10.99,
+      "discounted": 9.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 900
+    },
+    {
+      "id": "11",
+      "productName": "spaghetti ratatouille",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fspaghetti%2Fratatouille.png?alt=media&token=e52a50a5-5aa3-45a7-84bb-96848796cfdd",
+      "category": "spaghetti",
+      "price": 12.99,
+      "discounted": 8.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 700
+    },
+    {
+      "id": "12",
+      "productName": "spaghetti bolognese",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fspaghetti%2Fbolognese.png?alt=media&token=6254b6fb-e9e7-42c5-a175-32971fe85865",
+      "category": "spaghetti",
+      "price": 9.99,
+      "discounted": 8.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 1100
+    },
+    {
+      "id": "13",
+      "productName": "Nicoise salad",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fsalad%2Fnicoise-salad.png?alt=media&token=5745e134-0f01-4acd-bd0f-51b69de853ed",
+      "category": "salad",
+      "price": 7.99,
+      "discounted": 5.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 1200
+    },
+    {
+      "id": "14",
+      "productName": "Seasonal salad",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fsalad%2Fseasonal-salad.png?alt=media&token=ea40634e-0e1f-48e2-b177-1194c8eda9c6",
+      "category": "salad",
+      "price": 9.99,
+      "discounted": 6.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.6,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.7,
+      "sold": 300
+    },
+    {
+      "id": "15",
+      "productName": "Garden salad",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fsalad%2Fgarden-salad.png?alt=media&token=55c2bfd8-891a-44ff-bdf4-938a7c911dae",
+      "category": "salad",
+      "price": 9.99,
+      "discounted": 7.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 700
+    },
+    {
+      "id": "16",
+      "productName": "Big Mac Burger",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fhamburger%2Fbigmac-burger.png?alt=media&token=4fa16960-f1b6-424a-9d3d-0fec5c60d976",
+      "category": "hamburger",
+      "price": 12.99,
+      "discounted": "",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 1200
+    },
+    {
+      "id": "17",
+      "productName": "Special Big Beef",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fhamburger%2Fbigbeef-burger.png?alt=media&token=1162afce-b08f-4225-ba0b-8ed780694cac",
+      "category": "hamburger",
+      "price": 14.99,
+      "discounted": 10.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 1200
+    },
+    {
+      "id": "18",
+      "productName": "cheese beef burger",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fhamburger%2Fcheese-burger.png?alt=media&token=ff964add-ed5a-46ce-8606-707d9112326b",
+      "category": "hamburger",
+      "price": 10.99,
+      "discounted": 8.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 700
+    },
+    {
+      "id": "19",
+      "productName": "double cheese beef",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fhamburger%2Fdouble-cheese-burger.png?alt=media&token=eb2c71f6-358d-469f-8214-aa17a088229f",
+      "category": "hamburger",
+      "price": 7.99,
+      "discounted": 6.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 800
+    },
+    {
+      "id": "20",
+      "productName": "Royal Beef Burger",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fhamburger%2Froyal-beef-burger.png?alt=media&token=f4b63429-cebc-4a56-8b21-e69e4188806b",
+      "category": "hamburger",
+      "price": 14.99,
+      "discounted": 12.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8,
+      "sold": 1200
+    },
+    {
+      "id": "21",
+      "productName": "Fanta",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fdrink%2Ffanta.png?alt=media&token=4ed34e0f-5378-4b76-b3b3-55fef6663137",
+      "category": "drink",
+      "price": 3.99,
+      "discounted": "",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8
+    },
+    {
+      "id": "22",
+      "productName": "Coca Cola",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fdrink%2Fcocacola.png?alt=media&token=b98313a4-3b81-4abb-a255-cc8f4ac8c409",
+      "category": "drink",
+      "price": 3.99,
+      "discounted": "",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8
+    },
+    {
+      "id": "23",
+      "productName": "sprite",
+      "image": "https://firebasestorage.googleapis.com/v0/b/food-fe18a.appspot.com/o/images%2Fproducts%2Fdrink%2Fsprite.png?alt=media&token=c5eb16ec-5447-4191-b282-2d77a95bc083",
+      "category": "drink",
+      "price": 2.99,
+      "discounted": "",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "reviews": [
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.9,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "name": "ahihi",
+          "rating": 4.8,
+          "dateTime": "22 April, 2022",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+      "avgRating": 4.8
+    }
+  ]
+}

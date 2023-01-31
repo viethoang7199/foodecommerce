@@ -1,0 +1,29 @@
+@mixin flex($align-item, $justify-content) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+
+@mixin initial {
+  @media (max-width: 1599px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 430px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 431px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}

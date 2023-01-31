@@ -1,0 +1,29 @@
+.cartpopup {
+  transform: translateX(200%);
+  transition: 1s ease;
+  overflow: auto;
+  @include mobile {
+    width: 100%;
+  }
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__center {
+    height: calc(100% - 20rem);
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0.25rem;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #fafafa;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--pink);
+      border-radius: 3.125rem;
+    }
+  }
+  &__bot {
+    height: 13.75rem;
+  }
+}

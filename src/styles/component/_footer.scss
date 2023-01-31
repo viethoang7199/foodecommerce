@@ -1,0 +1,30 @@
+.footer {
+  background-image: url("../../assets/images/home/footer.png");
+  background-size: cover;
+  &__item {
+    @include mobile {
+      width: 100%;
+    }
+    @include tablet {
+      width: 50%;
+    }
+    h3 {
+      @include mobile {
+        margin-bottom: 0.625rem;
+      }
+      @include tablet {
+        margin-bottom: 0.625rem;
+      }
+    }
+    &__categories {
+      &-item {
+        a {
+          &:hover {
+            transform: translateX(1.25rem);
+            transition: 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+}

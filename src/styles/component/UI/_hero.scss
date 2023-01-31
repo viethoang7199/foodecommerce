@@ -1,0 +1,42 @@
+.hero {
+  .slick-slide > div {
+    margin: 0;
+  }
+  .slick-list {
+    margin: 0;
+    padding: 0;
+  }
+  .slick-prev,
+  .slick-next {
+    width: 3rem;
+    height: 3rem;
+    &::before {
+      font-size: 34px;
+      line-height: 1.5;
+    }
+    &:hover {
+      background-color: var(--pink);
+    }
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .slick-prev {
+    left: 20px !important;
+    @include mobile {
+      display: none !important;
+    }
+    @include tablet {
+      display: none !important;
+    }
+  }
+  .slick-next {
+    right: 20px !important;
+    @include mobile {
+      display: none !important;
+    }
+    @include tablet {
+      display: none !important;
+    }
+  }
+}
