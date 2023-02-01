@@ -41,7 +41,7 @@ const ProductDetail = () => {
     }, [docRef])
 
 
-    const { image, productName, price, category, avgRating, discounted, description } = product;
+    const { img, productName, price, category, avgRating, discounted, description } = product;
     const related = products.filter(item => item.category === category)
 
     const handleAddToCart = (item) => {
@@ -51,7 +51,7 @@ const ProductDetail = () => {
                 productName: item.productName,
                 price: item.price,
                 discounted: item.discounted,
-                image: item.image,
+                image: item.img,
                 quantity: 1,
             })
         )
@@ -102,7 +102,7 @@ const ProductDetail = () => {
                 <div className="container m-auto">
                     <div className='grid grid-cols-2 gap-6 mb-20'>
                         <div className='p-12 w-3/4 m-auto rounded-2xl bg-background'>
-                            <img className='w-3/4 m-auto' src={image} alt={productName} />
+                            <img className='w-3/4 m-auto' src={img} alt={productName} />
                         </div>
                         <div>
                             <h2 className='text-4xl font-bold capitalize mb-2'>{productName}</h2>
