@@ -21,7 +21,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className='footer__item w-1/4 p-4 pl-12 grow'>
+                    <div className='footer__item w-1/4 p-4 md:pl-12 grow'>
                         <h3 className='text-white text-xl uppercase font-bold mb-8'>Looking for Tên shop</h3>
                         <div className='footer__item__address'>
                             <p className='text-dark-gray'>Đắk Lắk</p>
@@ -42,7 +42,7 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='footer__item w-1/4 p-4 pl-12 grow'>
+                    <div className='footer__item w-1/4 p-4 lg:pl-12 grow'>
                         <h3 className='footer__item__categories text-white text-xl uppercase font-bold mb-8'>Categories</h3>
                         <ul>
                             <li className='footer__item__categories-item mb-3 text-dark-gray '>

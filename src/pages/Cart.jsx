@@ -9,6 +9,7 @@ import Quantity from '../components/common/Quantity/Quantity';
 import { cartSlice } from '../store/Slice/cartSlice';
 import { motion } from 'framer-motion'
 import { toast } from 'react-toastify';
+import Helmet from '../components/UI/Helmet'
 
 const Cart = () => {
     const cartList = useSelector(state => state.cartList.cartItems);
@@ -48,7 +49,7 @@ const Cart = () => {
         window.scroll(0, 0)
     })
 
-    return (
+    return <Helmet title='Cart'>
         <div className='cart__page' >
             <BackToTop />
             <BreadCrumb />
@@ -170,7 +171,7 @@ const Cart = () => {
                 </div>
             }
         </div>
-    )
+    </Helmet>
 };
 
 export default Cart;

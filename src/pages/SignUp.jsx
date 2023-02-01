@@ -14,7 +14,7 @@ import { userSlice } from "../store/Slice/userSlice";
 import { storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import Avatar from '../assets/images/avatar/avatar.png'
+import Helmet from '../components/UI/Helmet'
 
 const SignUp = () => {
 
@@ -207,7 +207,7 @@ const SignUp = () => {
         window.scroll(0, 0)
     }, [])
 
-    return (
+    return <Helmet title='Sign Up'>
         <>
             {isLoading && <Loading />}
             <div className="signup h-full pt-20">
@@ -309,7 +309,7 @@ const SignUp = () => {
                 </div>
             </div>
         </>
-    );
+    </Helmet>
 };
 
 export default SignUp;

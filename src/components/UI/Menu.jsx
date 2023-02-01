@@ -18,21 +18,15 @@ const Menu = () => {
         lazyLoad: true,
         responsive: [
             {
-                breakpoint: 426,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 992,
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
                 }
             }
         ]
@@ -57,10 +51,10 @@ const Menu = () => {
     }, [])
 
     return (
-        <div className='menu bg-background pt-2 lg:pt-8 pb-10'>
+        <div className='menu bg-background pt-2 lg:pt-8 pb-6 lg:pb-10'>
             <div className='container m-auto'>
-                <div className='-mt-14'>
-                    <SectionTitle name='Menu' className='!text-3xl' />
+                <div className='-mt-3 lg:-mt-14'>
+                    <SectionTitle name='Menu' className='md:!text-[28px] lg:!text-3xl' />
                 </div>
                 <Slider {...settings}>
                     {menus.map(item => (

@@ -25,7 +25,7 @@ const Commit = () => {
     return (
         <div className="commit p-4 pt-6">
             <div className="container m-auto">
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {commits.map(item => (
                         <div className="py-8 px-6 rounded-3xl shadow-lg border border-gray-200" key={item.id}>
                             <img className="w-16 h-16 object-cover m-auto" src={item.imgCommit} alt={item.title} />

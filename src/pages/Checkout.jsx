@@ -15,6 +15,7 @@ import { db } from '../firebase';
 import { cartSlice } from '../store/Slice/cartSlice';
 
 import useAuth from '../CustomHook/useAuth'
+import Helmet from '../components/UI/Helmet'
 
 
 const Checkout = () => {
@@ -96,7 +97,7 @@ const Checkout = () => {
 
     const { currentUser } = useAuth();
 
-    return (
+    return <Helmet title='Checkout'>
         <>
             {loading && <Loading />}
             <BreadCrumb />
@@ -294,7 +295,7 @@ const Checkout = () => {
                 }
             </div>
         </>
-    );
+    </Helmet>
 };
 
 export default Checkout;

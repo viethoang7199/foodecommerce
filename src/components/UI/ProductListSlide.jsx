@@ -9,26 +9,26 @@ const ProductListSlide = ({ data }) => {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 1500,
-        slidesToShow: 3,
+        slidesToShow: 5,
         swipeToSlide: true,
         lazyLoad: true,
         responsive: [
             {
-                breakpoint: 426,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-            {
-                breakpoint: 850,
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
                 }
             },
             {
-                breakpoint: 1300,
+                breakpoint: 600,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
                 }
             }
         ]

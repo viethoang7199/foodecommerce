@@ -21,16 +21,18 @@ import { BsDroplet } from "react-icons/bs";
 import { GiKnifeFork, GiReceiveMoney } from "react-icons/gi";
 
 import useGetData from '../CustomHook/useGetData';
+import Helmet from '../components/UI/Helmet'
+
 
 const Home = () => {
 
     const { data: products } = useGetData('products')
 
-    useEffect(() => {
-        window.scroll(0, 0)
-    }, []);
+    // useEffect(() => {
+    //     window.scroll(0, 0)
+    // }, []);
 
-    return (
+    return <Helmet title='Home'>
         <section className='main__content overflow-x-hidden'>
             <div className='section__backtotop'>
                 <BacktoTop />
@@ -43,35 +45,35 @@ const Home = () => {
             </div>
 
             <div className='about py-20'>
-                <div className="container mx-auto px-32">
-                    <div className="grid grid-cols-3">
-                        <div className='col-span-2 px-8'>
-                            <div className='flex gap-5'>
-                                <div className='flex flex-col gap-5'>
-                                    <img className='w-[420px] h-[330px] object-cover rounded-xl' src={about_img_01} alt="about-thumbnail" />
-                                    <div className='flex gap-5'>
-                                        <img className='w-[310px] h-[230px] object-cover rounded-xl' src={about_img_04} alt="about-thumbnail" />
-                                        <img className='w-[84px] h-[230px] object-cover rounded-xl' src={about_img_03} alt="about-thumbnail" />
+                <div className="container mx-auto xl:px-32">
+                    <div className="lg:grid grid-cols-3">
+                        <div className='col-span-2 px-4'>
+                            <div className='grid grid-cols-3 gap-5 lg:gap-5'>
+                                <div className='col-span-2 flex flex-col gap-5 grow'>
+                                    <img className='w-full h-[180px] lg:h-[330px] object-cover rounded-xl' src={about_img_01} alt="about-thumbnail" />
+                                    <div className='flex justify-between gap-5'>
+                                        <img className='grow w-full h-[128px] lg:h-[230px] object-cover rounded-xl' src={about_img_04} alt="about-thumbnail" />
+                                        <img className='w-[46px] xl:w-[84px] h-[128px] lg:h-[230px] object-cover rounded-xl' src={about_img_03} alt="about-thumbnail" />
                                     </div>
                                 </div>
-                                <div className='flex items-center justify-center flex-col gap-5'>
-                                    <img className='w-[280px] h-[210px] object-cover rounded-xl' src={about_img_05} alt="about-thumbnail" />
-                                    <img className='w-[280px] h-[210px] object-cover rounded-xl' src={about_img_02} alt="about-thumbnail" />
+                                <div className='col-span-1 flex justify-center flex-col gap-3 md:gap-5'>
+                                    <img className='w-full h-[120px] lg:h-[210px] object-cover rounded-xl' src={about_img_05} alt="about-thumbnail" />
+                                    <img className='w-full h-[120px] lg:h-[210px] object-cover rounded-xl' src={about_img_02} alt="about-thumbnail" />
 
-                                    <div className='flex items-center gap-5'>
-                                        <p className='text-5xl font-black'>20</p>
+                                    <div className='flex items-center gap-1 md:gap-5'>
+                                        <p className='text-3xl md:text-5xl font-black text-pink'>20</p>
                                         <p className='flex flex-col'>
-                                            <span className='uppercase text-gray-600 text-base font-medium'>Years of</span>
-                                            <span className='uppercase text-dark-blue text-xl font-bold'>Experience</span>
+                                            <span className='uppercase text-gray-600 text-xs md:text-base font-medium'>Years of</span>
+                                            <span className='uppercase text-dark-blue text-sm md:text-xl font-bold'>Experience</span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className='pt-10'>
+                        <div className='pt-10 px-4'>
                             <div className='mb-5'>
-                                <p className='font-lobster text-xl mb-2'>About Us</p>
+                                <p className='font-lobster text-xl mb-2 text-pink'>About Us</p>
                                 <h4 className='text-[40px] text-dark-blue leading-tight font-extrabold mb-7'>We Always Provide Quality Fast Foods For You</h4>
                                 <p className='text-gray-600'>Seamlessly conceptualize sticky functionalities after prospective data. Interactively unleash customized supply chains whereas goal oriented paradigm.</p>
                             </div>
@@ -134,7 +136,7 @@ const Home = () => {
                 <Feedback />
             </div>
         </section>
-    );
+    </Helmet>
 };
 
 export default Home;

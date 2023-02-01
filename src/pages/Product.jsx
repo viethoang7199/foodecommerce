@@ -9,6 +9,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
 
 import useGetData from '../CustomHook/useGetData';
+import Helmet from '../components/UI/Helmet'
 
 const Product = () => {
 
@@ -112,16 +113,16 @@ const Product = () => {
 
     }, [])
 
+    const [filterMobile, setFilterMobile] = useState(false)
 
-    return (
+    return <Helmet title='Shop'>
         <>
             <BackToTop />
             <BreadCrumb title='Shop' />
             <div className='container mx-auto mt-20 px-4'>
                 <div className='flex justify-start  mb-10'>
-                    <div className='widget__filter rounded-2xl shadow-2xl py-8 min-w-[250px] max-w-[250px] w-full relative h-auto'>
-                        <div
-                            className={`widget__filter__item ${fix ? 'sticky top-28' : ''}`}>
+                    <div className={`rounded-2xl shadow-2xl py-8 min-w-[250px] max-w-[250px] w-full relative h-auto  ${filterMobile ? 'block' : 'block'}`}>
+                        <div className={`${fix ? 'sticky top-28' : ''}`}>
                             <div className='widget__filter__cat'>
                                 <h4 className='text-dark-gray lg:text-xl xl:text-2xl text-center mb-3 uppercase font-semibold px-4'>Category</h4>
                                 <div className='mb-10'>
@@ -167,9 +168,16 @@ const Product = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='pl-8 grow'>
+                    <div className='lg:pl-8 grow'>
                         <div className='flex justify-between mb-10 shadow-lg px-10 py-6 rounded-xl w-full'>
-                            <div className='grow'>
+
+                            <div className='bg-pink text-white p-4'
+                                onClick={() => setFilterMobile(!filterMobile)}
+                            >
+                                Click
+                            </div>
+
+                            <div className='grow hidden lg:block'>
                                 <InputText
                                     type='text'
                                     className='px-6 py-2 w-3/4 shadow-lg border !border-dark-gray border-solid rounded-2xl'
@@ -178,7 +186,7 @@ const Product = () => {
                                 />
                             </div>
                             <select
-                                className='shadow-xl outline-none px-4 border border-dark-gray border-solid rounded-2xl cursor-pointer'
+                                className='shadow-xl outline-none py-2 px-4 border border-dark-gray border-solid rounded-2xl cursor-pointer'
                                 onChange={handleSort}
                             >
                                 <option>Sort By ...</option>
@@ -199,7 +207,7 @@ const Product = () => {
                 </div>
             </div>
         </>
-    );
+    </Helmet>
 };
 
 export default Product;

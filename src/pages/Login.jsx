@@ -10,6 +10,7 @@ import InputText from '../components/common/InputText/InputText';
 import Loading from '../components/UI/Loading';
 import { auth } from '../firebase';
 import { userSlice } from '../store/Slice/userSlice';
+import Helmet from '../components/UI/Helmet'
 
 const Login = () => {
     const [type, setType] = useState('password');
@@ -115,7 +116,7 @@ const Login = () => {
         window.scroll(0, 0)
     }, [])
 
-    return (
+    return <Helmet title='Login'>
         <>
             {isLoading && <Loading />}
             <div className="login h-full pt-20">
@@ -186,7 +187,7 @@ const Login = () => {
                 </div>
             </div>
         </>
-    );
+    </Helmet>
 };
 
 export default Login;

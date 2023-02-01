@@ -8,6 +8,7 @@ import { db } from '../firebase';
 import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { nanoid } from 'nanoid';
 import Loading from "../components/UI/Loading";
+import Helmet from '../components/UI/Helmet'
 
 const Contact = () => {
 
@@ -46,7 +47,7 @@ const Contact = () => {
     }, [])
 
 
-    return (
+    return <Helmet title='Contact'>
         <>
             {isLoading && <Loading />}
             <BreadCrumb title={<><span>Contact</span> <span className='text-orange'>Us</span></>} />
@@ -120,7 +121,7 @@ const Contact = () => {
                 </div>
             </div>
         </>
-    );
+    </Helmet>
 }
 
 export default Contact;

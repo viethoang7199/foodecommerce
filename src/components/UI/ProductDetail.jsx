@@ -17,6 +17,8 @@ import { getDoc } from 'firebase/firestore';
 
 import useGetData from '../../CustomHook/useGetData';
 
+import Helmet from './Helmet';
+
 const ProductDetail = () => {
     const [tabs, setTabs] = useState('desc');
     const { id } = useParams();
@@ -95,7 +97,7 @@ const ProductDetail = () => {
         window.scroll(0, 0)
     }, [])
 
-    return (
+    return <Helmet title={productName}>
         <>
             <BreadCrumb title={<span className='text-orange'>{productName}</span>} name={productName} />
             <div className='pt-32 h-full'>
@@ -250,7 +252,7 @@ const ProductDetail = () => {
                 </div>
             </div>
         </>
-    );
+    </Helmet>
 };
 
 export default ProductDetail;

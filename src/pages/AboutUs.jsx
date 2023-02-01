@@ -19,7 +19,7 @@ import SectionSubtitle from '../components/common/SectionSubtitle/SectionSubtitl
 import SectionTitle from '../components/common/SectionTitle/SectionTitle';
 
 import Feedback from '../components/UI/Feedback'
-
+import Helmet from '../components/UI/Helmet'
 
 const AboutUs = () => {
 
@@ -27,7 +27,7 @@ const AboutUs = () => {
         window.scroll(0, 0)
     }, [])
 
-    return (
+    return <Helmet title='About'>
         <div className='about mt-20'>
             <BreadCrumb title={<><span>About</span> <span className='text-orange'>Us</span></>} />
             <div className='container mx-auto'>
@@ -189,7 +189,7 @@ const AboutUs = () => {
                 </div>
             </section>
         </div>
-    )
+    </Helmet>
 }
 
 export default AboutUs

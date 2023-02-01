@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import { AiOutlineCaretDown, AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineCaretDown, AiOutlineSearch, AiOutlineDown } from 'react-icons/ai';
 import { FaBars, FaRegEdit, FaSignOutAlt, FaTimes, FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 import { FiUsers } from 'react-icons/fi';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
@@ -50,6 +50,8 @@ const Header = ({ onHandleLogout }) => {
     const [openSearchPopup, setOpenSearchPopup] = useState(false);
     const [openCartPopup, setOpenCartPopup] = useState(false);
     const [userList, setUserList] = useState(false);
+    const [userMobileNav, setUserMobileNav] = useState(false);
+
     const { currentUser } = useAuth();
 
     const { pathname } = useLocation()
@@ -134,16 +136,58 @@ const Header = ({ onHandleLogout }) => {
                         </div>
                     ))}
 
-                    <div className="account lg:hidden pt-6 pb-1 w-full text-white text-base md:text-xl mb-5 border-b border-dashed border-light-gray font-bold"
-                        onClick={() => setOpenMenuMobile(false)}
+                    <div className='account lg:hidden pt-6 pb-1 w-full text-white text-base md:text-xl mb-5 border-b border-dashed border-light-gray font-bold'
+                        onClick={() => setUserMobileNav(!userMobileNav)}
                     >
-                        <Link
-                            to='/login'
-                            className='flex justify-start items-center text-white'
-                        >
-                            <FiUsers />
-                            <span className='ml-3'>Login / Register</span>
-                        </Link>
+                        {
+                            currentUser
+                                ?
+                                <div className='flex items-center justify-between relative'>
+                                    <div className='flex items-center'>
+                                        <img
+                                            className='rounded-full cursor-pointer w-10 h-10 object-contain'
+                                            src={currentUser && currentUser.photoURL ? currentUser.photoURL : Avatar}
+                                            alt="avt"
+                                        />
+                                        <p className='ml-2'>
+                                            <span>Welcome,&nbsp;</span>
+                                            <span>{currentUser.displayName}</span>
+                                        </p>
+                                    </div>
+
+                                    <span><AiOutlineDown /></span>
+
+                                    <div className={`absolute left-0 top-10 bg-white rounded py-3 w-full ${userMobileNav ? 'block' : 'hidden'}`}
+                                        onClick={() => setOpenMenuMobile(false)}
+                                    >
+                                        <Link to='/update-profile' className='flex items-center px-4 py-2 mx-2 rounded-xl text-black'>
+                                            <span className='mr-3'><FaRegEdit /></span>
+                                            <span>Edit profile</span>
+                                        </Link>
+
+                                        <Link to='/cart' className='flex items-center px-4 py-2 mx-2 rounded-xl text-black'>
+                                            <span className='mr-3 relative after:content-[attr(quantity)] after:bg-pink after:w-4 after:h-4 after:absolute after:-top-2 after:-right-2 after:rounded-full after:text-white after:text-xs after:flex after:justify-center after:items-center' quantity={cartList.length}>
+                                                <HiOutlineShoppingBag />
+                                            </span>
+                                            <span>View cart</span>
+                                        </Link>
+
+                                        <p className="flex items-center px-4 !text-black py-2 m-2 rounded-xl bg-slate-300 shadow-md cursor-pointer" onClick={onHandleLogout}>
+                                            <span className='mr-3 font-semibold'><FaSignOutAlt /></span>
+                                            <span className='font-medium text-lg'>Logout</span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                :
+                                <Link
+                                    to='/login'
+                                    className='flex justify-start items-center text-white'
+                                >
+                                    <FiUsers />
+                                    <span className='ml-3'>Login / Register</span>
+                                </Link>
+                        }
                     </div>
                 </div>
 
