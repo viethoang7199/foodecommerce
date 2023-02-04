@@ -13,6 +13,8 @@ import SearchPopup from '../UI/Popup/SearchPopup/SearchPopup';
 import useAuth from '../../CustomHook/useAuth';
 import { GoGraph } from "react-icons/go";
 
+import Logo from '../../assets/images/logo/logo.png'
+
 export const navMenus = [
     {
         display: "Home",
@@ -73,19 +75,19 @@ const Header = ({ onHandleLogout }) => {
             />
 
             <SearchPopup
-                className={`${openSearchPopup ? 'active' : ''}`}
+                className={`${openSearchPopup ? '!translate-y-0 transition-all duration-500 ease-in-out !opacity-100' : ''}`}
                 onHandleCloseSearchPopup={() => setOpenSearchPopup(false)}
             />
 
             <CartPopup
-                className={`${openCartPopup ? 'active' : ''}`}
+                className={`${openCartPopup ? '!translate-x-0 transition-all duration-500 ease-in-out' : ''}`}
                 onHandleClose={() => setOpenCartPopup(false)}
                 onHandleViewCart={() => setOpenCartPopup(false)}
                 onHandleCheckout={() => setOpenCartPopup(false)}
                 onHandleReturnShop={() => setOpenCartPopup(false)}
             />
 
-            <div className='container flex justify-between items-center px-4 py-5 m-auto lg:px-16 xl:px-4'>
+            <div className='container flex justify-between items-center px-4 py-3 m-auto lg:px-16 xl:px-4'>
                 <div className='lg:hidden mx-2'
                     onClick={() => setOpenMenuMobile(true)}
                 >
@@ -93,12 +95,18 @@ const Header = ({ onHandleLogout }) => {
                     />
                 </div>
 
-                <div className='text-center lg:text-left text-3xl font-bold grow'>
-                    <Link to='/'>LOGO</Link>
+                <div className='grow'>
+                    <Link to='/'>
+                        <img
+                            className='w-20 object-cover mx-auto lg:mx-0'
+                            src={Logo}
+                            alt="logo"
+                        />
+                    </Link>
                 </div>
 
                 <div className={`lg:bg-transparent bg-dark-blue flex lg:justify-center justify-start lg:items-center items-center flex-col lg:flex-row lg:static absolute top-0 left-0 z-50 w-full lg:w-auto md:w-[450px] h-screen lg:h-auto pt-20 lg:pt-0 md:pt-24 px-7 lg:px-0 pb-7 lg:pb-0 -translate-x-full lg:translate-x-0 transition-all duration-500 ease-in-out overflow-auto grow ${openMenuMobile
-                    ? 'translate-x-0 transition-all duration-500 ease'
+                    ? '!translate-x-0 transition-all duration-500 ease-in-out'
                     : ''}`}>
                     <div className="lg:hidden text-white bg-pink text-xl flex justify-center items-center w-full h-12 md:h-16 absolute top-0 left-0 z-30"
                         onClick={() => setOpenMenuMobile(false)}
@@ -183,8 +191,9 @@ const Header = ({ onHandleLogout }) => {
                                 <Link
                                     to='/login'
                                     className='flex justify-start items-center text-white'
+                                    onClick={() => setOpenMenuMobile(false)}
                                 >
-                                    <FiUsers />
+                                    <span><FiUsers /></span>
                                     <span className='ml-3'>Login / Register</span>
                                 </Link>
                         }

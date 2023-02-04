@@ -25,7 +25,7 @@ const BackToTop = () => {
     return (
         <>
             {backTop && (
-                <div className='backTop fixed bottom-14 z-[999] right-12'>
+                <div className='backTop fixed bottom-14 z-40 right-12'>
                     <ButtonCommon
                         name={<BsFillArrowUpCircleFill />}
                         onClick={handleBackTop}

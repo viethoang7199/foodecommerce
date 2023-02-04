@@ -1,14 +1,16 @@
 import React from 'react';
 
-const InputText = ({ placeholder, value, name, className, onChange, type }) => {
+const InputText = ({ placeholder, value, name, className, onChange, onClick, type, disabled }) => {
     return (
         <input
             type={`${type}`}
-            className={`text-base border-b border-dark-blue outline-1 outline-none ${className}`}
+            className={`text-base border border-gray-400 outline-1 outline-none px-4 py-2 rounded-lg ${className}`}
             placeholder={placeholder}
             value={value}
             name={name}
             onChange={onChange}
+            onClick={onClick}
+            disabled={disabled}
         />
     );
 };

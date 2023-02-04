@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { FaTrashAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import BackToTop from '../components/common/BackToTop/BackToTop';
 import BreadCrumb from '../components/common/BreadCrumb/BreadCrumb';
 import ButtonCommon from '../components/common/ButtonCommon/ButtonCommon';
 import Quantity from '../components/common/Quantity/Quantity';
+import Helmet from '../components/UI/Helmet';
 import { cartSlice } from '../store/Slice/cartSlice';
-import { motion } from 'framer-motion'
-import { toast } from 'react-toastify';
-import Helmet from '../components/UI/Helmet'
 
 const Cart = () => {
     const cartList = useSelector(state => state.cartList.cartItems);
@@ -29,11 +28,9 @@ const Cart = () => {
 
     const removeCartItem = (cartItemId) => {
         setLoading(true);
-        setTimeout(() => {
-            dispatch(cartSlice.actions.REMOVE_ITEM(cartItemId));
-            setLoading(false)
-            toast.success('The product has been removed from the cart');
-        }, 1000)
+        dispatch(cartSlice.actions.REMOVE_ITEM(cartItemId));
+        setLoading(false)
+        toast.success('The product has been removed from the cart');
     }
 
     const deleteAllItems = () => {
@@ -55,42 +52,56 @@ const Cart = () => {
             <BreadCrumb />
             {cartList.length > 0 ?
                 <div className="container m-auto">
-                    <div className="flex justify-between">
-                        <div className="py-20 pr-10 w-full">
-                            <table className='cart__page__table m-auto rounded-xl'>
-                                <thead>
+                    <div className="flex justify-between flex-col lg:flex-row">
+                        <div className="py-14 lg:py-20 px-4 lg:px-0 lg:pr-10 w-full">
+                            <table className='cart__page__table w-full border-separate md:border-collapse md:border md:border-gray-200 m-auto rounded-xl'>
+                                <thead className='bg-gray-100 hidden md:table-header-group'>
                                     <tr>
-                                        <th>Image</th>
-                                        <th>Product Name</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                        <th>Remove</th>
+                                        <th className='px-2 py-3 font-bold'>Image</th>
+                                        <th className='px-2 py-3 font-bold'>Product Name</th>
+                                        <th className='px-2 py-3 font-bold'>Price</th>
+                                        <th className='px-2 py-3 font-bold'>Quantity</th>
+                                        <th className='px-2 py-3 font-bold'>Total</th>
+                                        <th className='px-2 py-3 font-bold'>Remove</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {cartList.map((cart, index) => (
-                                        <tr className='cart__page__table__item' key={index}>
-                                            <td data-title='Product'>
-                                                <img className='cart__page__table__item-img' src={cart.image} alt='' />
+                                        <tr
+                                            key={index}
+                                            className='cart__page__table__item block md:table-row border border-gray-400 my-5 mx-0'
+                                        >
+                                            <td
+                                                data-title='Product'
+                                                className='text-right md:text-center py-4 md:py-5 px-4 md:px-0 border-b md:border border-gray-400 md:border-gray-200 block md:table-cell w-full md:w-auto pl-[25%] relative md:static after:content-[attr(data-title)] after:absolute after:left-4 after:top-2/4 after:block md:after:hidden after:font-semibold after:-translate-y-2/4'
+                                            >
+                                                <img className='cart__page__table__item-img w-20 h-20 object-cover mx-auto inline-block' src={cart.photoURL} alt='' />
                                             </td>
-                                            <td data-title='Name' className='text-lg font-medium'>{cart.productName}</td>
-                                            {/* <td data-title='Price'>${cart.price}</td> */}
-                                            <td>
+                                            <td data-title='Name'
+                                                className='text-right md:text-center py-4 md:py-5 px-4 md:px-0 border-b md:border border-gray-400 md:border-gray-200 block md:table-cell w-full md:w-auto pl-[25%] relative md:static after:content-[attr(data-title)] md:after:hidden after:absolute after:left-4 after:top-2/4 after:block after:font-semibold after:-translate-y-2/4'
+                                            >
+                                                {cart.productName}
+                                            </td>
+                                            <td
+                                                data-title='Price'
+                                                className='text-right md:text-center py-4 md:py-5 px-4 md:px-0 border-b md:border border-gray-400 md:border-gray-200 block md:table-cell w-full md:w-auto pl-[25%] relative md:static after:content-[attr(data-title)] md:after:hidden after:absolute after:left-4 after:top-2/4 after:block after:font-semibold after:-translate-y-2/4'
+                                            >
                                                 {cart.discounted ? <>
                                                     <span className="font-bold text-pink mr-2">
-                                                        {cart.discounted}
+                                                        ${cart.discounted}
                                                     </span>
                                                     <span className="text-dark-gray font-bold line-through">
-                                                        {cart.price}
+                                                        ${cart.price}
                                                     </span>
                                                 </>
                                                     : <span className="font-bold text-pink">
-                                                        {cart.price}
+                                                        ${cart.price}
                                                     </span>
                                                 }
                                             </td>
-                                            <td data-title='Quantity'>
+                                            <td data-title='Quantity'
+                                                className='text-right md:text-center py-4 md:py-5 px-4 md:px-0 border-b md:border border-gray-400 md:border-gray-200 block md:table-cell w-full md:w-auto pl-[25%] relative md:static after:content-[attr(data-title)] md:after:hidden after:absolute after:left-4 after:top-2/4 after:block after:font-semibold after:-translate-y-2/4'
+                                            >
                                                 <div className='cart__page__table__item-qty'>
                                                     <Quantity
                                                         onHandleDecreaseQty={() => decreaseItem(cart.id)}
@@ -99,12 +110,17 @@ const Cart = () => {
                                                     />
                                                 </div>
                                             </td>
-                                            <td data-title='Total' className='font-medium'>
-                                                {cart.totalPrice}
+                                            <td data-title='Total'
+                                                className='text-right md:text-center py-4 md:py-5 px-4 md:px-0 border-b md:border border-gray-400 md:border-gray-200 block md:table-cell w-full md:w-auto pl-[25%] relative md:static after:content-[attr(data-title)] md:after:hidden after:absolute after:left-4 after:top-2/4 after:block after:font-semibold after:-translate-y-2/4'
+                                            >
+                                                <span className='font-semibold text-pink'>
+                                                    ${cart.totalPrice}
+                                                </span>
                                             </td>
-                                            <td data-title='Remove'>
-                                                <motion.div
-                                                    whileTap={{ scale: 0.6 }}
+                                            <td data-title='Remove'
+                                                className='text-right md:text-center py-4 md:py-5 px-4 md:px-0 border-b md:border border-gray-400 md:border-gray-200 block md:table-cell w-full md:w-auto pl-[25%] relative md:static after:content-[attr(data-title)] md:after:hidden after:absolute after:left-4 after:top-2/4 after:block after:font-semibold after:-translate-y-2/4'
+                                            >
+                                                <div
                                                     className='cursor-pointer'
                                                 >
                                                     <ButtonCommon
@@ -113,18 +129,18 @@ const Cart = () => {
                                                         loading={loading}
                                                         onClick={() => removeCartItem(cart.id)}
                                                     />
-                                                </motion.div>
+                                                </div>
                                             </td>
                                         </tr>
                                     ))}
-                                    <tr>
-                                        <td colSpan={6} className='cart__page__table__item-action'>
-                                            <div className='flex justify-end items-center w-full'>
+                                    <tr className='flex justify-center md:table-row border border-gray-400 md:border-gray-200 my-5 mx-0'>
+                                        <td colSpan={6} className='cart__page__table__item-action py-4 md:py-5 px-4 md:px-0'>
+                                            <div className='flex justify-end items-center flex-col md:flex-row w-full'>
                                                 <ButtonCommon
                                                     name='Delete all products in cart'
                                                     onClick={deleteAllItems}
                                                 />
-                                                <Link to='/shop' className='action-btn mx-4'>
+                                                <Link to='/shop' className='action-btn mx-4 mt-5 md:mt-0 text-center w-full md:w-auto'>
                                                     <ButtonCommon name='Continue order' />
                                                 </Link>
                                             </div>
@@ -134,20 +150,20 @@ const Cart = () => {
                             </table>
                         </div>
 
-                        <div className='border-2 border-pink border-solid rounded-2xl w-4/12 h-full my-20'>
+                        <div className='border-2 border-gray-300 border-solid rounded-2xl mx-4 md:mx-0 mb-10 lg:mb-0 md:w-6/12 lg:w-4/12 h-full lg:my-20'>
                             <div className="p-6">
                                 <h4 className='text-xl font-semibold mb-4'>Cart totals</h4>
                                 <div className='py-4 border-t border-light-gray border-solid text-dark-blue font-medium flex justify-between items-center'>
                                     <span>Subtotal</span>
-                                    <span>${totalAmount}</span>
+                                    <span className='text-pink font-semibold'>${totalAmount}</span>
                                 </div>
                                 <div className='py-4 border-t border-light-gray border-solid text-dark-blue font-medium flex justify-between items-center'>
                                     <span>Shipping cost</span>
-                                    <span>$2.00</span>
+                                    <span className='text-pink font-semibold'>$2.00</span>
                                 </div>
                                 <div className='py-4 border-t border-light-gray border-solid text-dark-blue font-medium flex justify-between items-center'>
                                     <span>Total</span>
-                                    <span>${totalAmount + 2.00}</span>
+                                    <span className='text-pink font-semibold'>${totalAmount + 2.00}</span>
                                 </div>
                                 <p className='text-sm py-4 border-t border-light-gray border-solid text-dark-gray'>Taxes and shipping calculated at checkout</p>
                                 <Link to='/checkout'>

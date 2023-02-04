@@ -1,4 +1,3 @@
-
 const Helmet = (props) => {
     document.title = "Food - " + props.title
 

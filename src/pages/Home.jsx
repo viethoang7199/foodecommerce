@@ -28,23 +28,17 @@ const Home = () => {
 
     const { data: products } = useGetData('products')
 
-    // useEffect(() => {
-    //     window.scroll(0, 0)
-    // }, []);
+    useEffect(() => {
+        window.scroll(0, 0)
+    }, []);
 
     return <Helmet title='Home'>
         <section className='main__content overflow-x-hidden'>
-            <div className='section__backtotop'>
-                <BacktoTop />
-            </div>
-            <div className='section__hero'>
-                <Hero />
-            </div>
-            <div className='section__menu'>
-                <Menu />
-            </div>
+            <BacktoTop />
+            <Hero />
+            <Menu />
 
-            <div className='about py-20'>
+            <div className='py-20'>
                 <div className="container mx-auto xl:px-32">
                     <div className="lg:grid grid-cols-3">
                         <div className='col-span-2 px-4'>
@@ -73,7 +67,7 @@ const Home = () => {
 
                         <div className='pt-10 px-4'>
                             <div className='mb-5'>
-                                <p className='font-lobster text-xl mb-2 text-pink'>About Us</p>
+                                <p className='font-lobster text-xl font-semibold mb-2 text-pink'>About Us</p>
                                 <h4 className='text-[40px] text-dark-blue leading-tight font-extrabold mb-7'>We Always Provide Quality Fast Foods For You</h4>
                                 <p className='text-gray-600'>Seamlessly conceptualize sticky functionalities after prospective data. Interactively unleash customized supply chains whereas goal oriented paradigm.</p>
                             </div>
@@ -101,11 +95,11 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='section__popular_product py-10 sm:py-16 px-4 bg-background'>
+            <div className='py-10 sm:py-16 px-4 bg-background'>
                 <div className="container m-auto">
                     <div className='pb-2'>
                         <SectionSubtitle name='- Popular menu -' />
-                        <SectionTitle name={<span>Our popular delicious <span className='text-pink font-lobster font-normal'>foods</span></span>} />
+                        <SectionTitle name={<span>Our popular delicious <span className='text-pink font-lobster font-semibold'>foods</span></span>} />
                         <p className='relative text-center !text-black m-auto w-[300px] sm:w-[600px]'>
                             Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.
                         </p>
@@ -121,15 +115,15 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='section__commit py-16 px-4 h-full'>
+            <div className='py-16 px-4 h-full'>
                 <SectionSubtitle name='- Highest Quality -' />
                 <SectionTitle name='What makes us different' />
                 <Commit />
             </div>
 
-            <div className='section__feedback py-16 px-4 h-full bg-background'>
+            <div className='py-16 px-4 h-full bg-background'>
                 <SectionSubtitle name='- Testimonials -' />
-                <SectionTitle name={<span>Our customer <span className='text-pink font-lobster font-normal'>feedbacks</span></span>} />
+                <SectionTitle name={<span>Our customer <span className='text-pink font-lobster font-semibold'>feedbacks</span></span>} />
                 <p className='!text-black relative text-center m-auto w-[300px] sm:w-[600px]'>
                     Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.
                 </p>

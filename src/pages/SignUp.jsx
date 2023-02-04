@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
-import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
+import { collection, doc, serverTimestamp, setDoc } from 'firebase/firestore';
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, { useEffect, useState } from 'react';
 import { BsGoogle } from 'react-icons/bs';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
@@ -9,12 +10,11 @@ import { toast } from 'react-toastify';
 import ButtonCommon from '../components/common/ButtonCommon/ButtonCommon';
 import InputText from '../components/common/InputText/InputText';
 import Loading from "../components/UI/Loading";
-import { auth, db } from '../firebase';
+import { auth, db, storage } from '../firebase';
 import { userSlice } from "../store/Slice/userSlice";
-import { storage } from "../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import Helmet from '../components/UI/Helmet'
+import Helmet from '../components/UI/Helmet';
+import { nanoid } from "nanoid";
 
 const SignUp = () => {
 
@@ -56,114 +56,17 @@ const SignUp = () => {
             });
     }
 
-    // const submitSignup = async (e) => {
-    //     e.preventDefault();
-    //     setIsLoading(true)
-    //     try {
-    //         const userCredential = await createUserWithEmailAndPassword(auth, formSignUp.email, formSignUp.password)
-    //         const user = userCredential.user;
-    //         // await updateProfile(user, { displayName: `${formSignUp.fullName}` });
-    //         const storageRef = ref(storage, `avatar/${formSignUp.fullName}`);
-    //         const uploadTask = uploadBytesResumable(storageRef, imgUpload);
-
-    //         uploadTask.on((error) => {
-    //             console.log(error.message);
-    //         }, () => {
-    //             getDownloadURL(uploadTask.snapshot.ref).then(async (downloadurl) => {
-    //                 await updateProfile(user, {
-    //                     displayName: formSignUp.fullName,
-    //                     photoURL: Avatar || downloadurl,
-    //                 })
-    //                 await setDoc(doc(db, 'users', user.uid), {
-    //                     uid: user.uid,
-    //                     displayName: formSignUp.fullName,
-    //                     email: formSignUp.email,
-    //                     photoURL: Avatar || downloadurl,
-    //                     createdAt: serverTimestamp(),
-    //                     birthday: '',
-    //                     address: '',
-    //                     phoneNumber: ''
-    //                 })
-    //             })
-    //         })
-    //         setIsLoading(false)
-    //         navigate('/')
-    //     } catch (error) {
-    //         console.log(error.message);
-    //     }
-
-    //     // uploadBytes(imageRef, imgUpload)
-    //     //     .then(() => {
-    //     //         getDownloadURL(imageRef).then((url) => {
-    //     //         }).catch(error => {
-    //     //             console.log(error.message, "loi ne");
-    //     //         });
-    //     //     }).catch(error => {
-    //     //         console.log(error);
-    //     //     })
-    //     // setTimeout(async () => {
-    //     //     try {
-    //     //         const userCredential = await createUserWithEmailAndPassword(auth, formSignUp.email, formSignUp.password)
-    //     //         const user = userCredential.user;
-    //     //         // await updateProfile(user, { displayName: `${formSignUp.fullName}` });
-    //     //         const storageRef = ref(storage, `Images/ ${formSignUp.fullName}`);
-    //     //         const uploadTask = uploadBytesResumable(storageRef, imgUpload);
-
-    //     //         uploadTask.on((error) => {
-    //     //             console.log(error.message);
-    //     //         }, () => {
-    //     //             getDownloadURL(uploadTask.snapshot.ref).then(async (downloadurl) => {
-    //     //                 await updateProfile(user, {
-    //     //                     displayName: formSignUp.fullName,
-    //     //                     photoURL: downloadurl,
-    //     //                 })
-    //     //                 await setDoc(doc(db, 'users', formSignUp.fullName), {
-    //     //                     uid: user.uid,
-    //     //                     displayName: formSignUp.fullName,
-    //     //                     email: formSignUp.email,
-    //     //                     photoURL: downloadurl,
-    //     //                     dateTime: serverTimestamp(),
-    //     //                 })
-    //     //             })
-    //     //         })
-    //     //         // dispatch(
-    //     //         //     userSlice.actions.SET_USER(
-    //     //         //         await setDoc(doc(db, "users", formSignUp.fullName), {
-    //     //         //             uid: user.uid,
-    //     //         //             displayName: formSignUp.fullName,
-    //     //         //             email: formSignUp.email,
-    //     //         //             photoURL: imgUpload,
-    //     //         //             dateTime: serverTimestamp(),
-    //     //         //         })
-    //     //         //     )
-    //     //         // )
-    //     //         // navigate('/')
-    //     //         // toast.success('Đăng ký thành công! Đăng nhập cho bạn luôn rồi đó!', {
-    //     //         //     position: "top-center",
-    //     //         //     autoClose: 3000,
-    //     //         //     hideProgressBar: false,
-    //     //         //     closeOnClick: true,
-    //     //         //     pauseOnHover: true,
-    //     //         //     draggable: true,
-    //     //         //     progress: undefined,
-    //     //         //     theme: "colored",
-    //     //         // });
-    //     //         setIsLoading(false)
-    //     //     } catch (error) {
-    //     //         console.log(error.message);
-    //     //     }
-    //     // }, 2000);
-    // }
-
     const submitSignup = async (e) => {
         e.preventDefault();
         setIsLoading(true);
         try {
-            const userCredential = await createUserWithEmailAndPassword(auth, formSignUp.email, formSignUp.password);
-
+            const userCredential = await createUserWithEmailAndPassword(
+                auth,
+                formSignUp.email,
+                formSignUp.password
+            );
             const user = userCredential.user;
-
-            const storageRef = ref(storage, `avatar/ ${Date.now() + ' ' + formSignUp.fullName}`);
+            const storageRef = ref(storage, `images/avatar/${formSignUp.fullName}`);
             const uploadTask = uploadBytesResumable(storageRef, imgUpload);
 
             uploadTask.on((error) => {
@@ -179,9 +82,30 @@ const SignUp = () => {
                         displayName: formSignUp.fullName,
                         email: formSignUp.email,
                         photoURL: downloadURL,
+                        // birthday: '',
+                        // address: '',
+                        // phoneNumber: '',
+                        createdAt: serverTimestamp(),
                     })
                 })
             });
+
+            // await getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            //     await updateProfile(user, {
+            //         displayName: formSignUp.fullName,
+            //         photoURL: downloadURL,
+            //     });
+            //     await setDoc(doc(db, "users", downloadURL.user.uid), {
+            //         uid: user.uid,
+            //         displayName: formSignUp.fullName,
+            //         email: formSignUp.email,
+            //         photoURL: downloadURL,
+            //         birthday: '',
+            //         address: '',
+            //         phoneNumber: '',
+            //         createdAt: serverTimestamp(),
+            //     });
+            // })
 
             setIsLoading(false);
             toast.success('Account created successfully!');
@@ -212,14 +136,14 @@ const SignUp = () => {
             {isLoading && <Loading />}
             <div className="signup h-full pt-20">
                 <div className="container mx-auto">
-                    <div className="signup__form w-2/4 m-auto">
+                    <div className="signup__form md:w-3/4 m-auto">
 
                         <form
-                            className='py-10 px-12 my-20 xl:w-3/5 mx-auto bg-white shadow-2xl rounded-xl'
+                            className='py-10 px-10 md:px-24 my-20 lg:w-3/5 mx-auto bg-white shadow-2xl rounded-xl'
                             onSubmit={submitSignup}
                         >
                             <div className='pb-10 text-center'>
-                                <h4 className='text-6xl text-pink font-bold font-lobster mb-2'>Register</h4>
+                                <h4 className='text-5xl md:text-6xl text-pink font-bold font-lobster mb-2'>Register</h4>
                                 <p className='text-dark-gray text-sm'>Sign up by entering the information below</p>
                             </div>
                             <div className='text-center mb-10'>

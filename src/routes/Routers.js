@@ -10,6 +10,7 @@ import Checkout from '../pages/Checkout';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
+import NotFound from '../pages/NotFound';
 import Product from '../pages/Product';
 import SignUp from '../pages/SignUp';
 import Test from '../pages/Test';
@@ -32,6 +33,7 @@ const Routers = () => {
             <Route path='/reset-password' element={<ResetPassword />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<SignUp />} />
+            <Route path='/*' element={<NotFound />} />
             <Route path='/test' element={<Test />} />
         </Routes>
     );

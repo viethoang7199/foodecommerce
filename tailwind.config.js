@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lobster: ['Lobster', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        lobster: ['Lobster Two', 'cursive']
       },
       screens: {
         sm: "640px",

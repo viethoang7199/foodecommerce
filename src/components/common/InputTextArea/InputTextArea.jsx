@@ -9,7 +9,7 @@ const InputTextArea = ({ name, placeholder, value, className, onChange }) => {
             value={value}
             rows="4"
             cols="50"
-            className={`text-lg border border-dark-blue rounded-3xl outline-none ${className}`}
+            className={`text-lg border border-dark-blue rounded-lg outline-none ${className}`}
         ></textarea>
     );
 };

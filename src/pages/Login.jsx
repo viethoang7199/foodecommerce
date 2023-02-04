@@ -121,13 +121,13 @@ const Login = () => {
             {isLoading && <Loading />}
             <div className="login h-full pt-20">
                 <div className="container mx-auto">
-                    <div className="login__form w-2/4 m-auto">
+                    <div className="login__form md:w-3/4 m-auto">
                         <form
-                            className='py-10 px-16 my-20 xl:w-3/5 mx-auto bg-white shadow-2xl rounded-xl'
+                            className='py-10 px-10 md:px-24 my-20 lg:w-3/5 mx-auto bg-white shadow-2xl rounded-xl'
                             onSubmit={submitLogin}
                         >
                             <div className='pb-10 text-center'>
-                                <h4 className='text-6xl text-pink font-bold font-lobster'>Welcome</h4>
+                                <h4 className='text-5xl md:text-6xl text-pink font-bold font-lobster'>Welcome</h4>
                                 <p className='text-dark-gray text-sm'>Sign in by entering the information below</p>
                             </div>
                             <div className='text-center mb-10'>
@@ -150,7 +150,7 @@ const Login = () => {
                                     onChange={handleChangeField}
                                 />
                                 <span
-                                    className="absolute z-10 top-2 right-2 cursor-pointer"
+                                    className="absolute z-10 top-2/4 -translate-y-2/4 right-2 cursor-pointer"
                                     onClick={togglePassword}
                                 >{eye}</span>
                             </div>

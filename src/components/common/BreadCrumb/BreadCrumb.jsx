@@ -11,7 +11,7 @@ const BreadCrumb = ({ title }) => {
             <div className="breadcrumb mt-20 overflow-hidden w-full">
                 <div className="container mx-auto">
                     <div className='py-16 md:py-24 lg:py-28 xl:py-44 px-16 md:px-20 lg:px-40 xl:px-48'>
-                        <div className="text-white mb-6 text-5xl md:text-7xl font-medium font-lobster capitalize">
+                        <div className="text-white mb-6 text-5xl md:text-7xl font-semibold font-lobster capitalize">
                             <span>{title}</span>
                         </div>
                         <div>

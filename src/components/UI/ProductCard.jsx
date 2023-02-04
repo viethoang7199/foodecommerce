@@ -13,7 +13,7 @@ const ProductCard = ({ item }) => {
         dispatch(
             cartSlice.actions.ADD_ITEM({
                 id: item.id,
-                imgUrl: item.imgUrl,
+                image: item.photoURL,
                 productName: item.productName,
                 price: item.price,
             })
@@ -25,7 +25,7 @@ const ProductCard = ({ item }) => {
         <div className='product relative text-center mt-5 bg-white p-4 drop-shadow-lg rounded-xl duration-500 transition-all before:w-full before:h-2 before:bg-pink before:absolute before:bottom-0 before:left-0 before:opacity-0 before:rounded-br-xl before:rounded-bl-xl before:transition-all before:duration-500 hover:before:opacity-100 hover:before:transition-all hover:before:duration-500 hover:drop-shadow-2xl hover:shadow-2xl hover:duration-500 hover:transition-all'>
             <div>
                 {item.discounted ? <>
-                    <div className='p-2 bg-pink absolute top-0 right-0 rounded-xl'>
+                    <div className='p-2 bg-pink absolute z-20 top-0 right-0 rounded-xl'>
                         <span className='text-white'>-{Math.ceil(((item.price - item.discounted) / item.price) * 100)}%</span>
                     </div>
                 </> : ''}
@@ -33,7 +33,7 @@ const ProductCard = ({ item }) => {
                     <Link to={`/shop/${item.id}`}>
                         <img
                             className='duration-1000 hover:scale-110 hover:duration-1000 h-[200px] w-[250px] object-contain mx-auto'
-                            src={item.img}
+                            src={item.photoURL}
                             alt={item.productName}
                         />
                     </Link>

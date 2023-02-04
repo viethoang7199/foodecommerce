@@ -13,15 +13,15 @@ const CartPopup = ({ onHandleClose, className, onHandleViewCart, onHandleCheckou
     const totalAmount = useSelector(state => state.cartList.totalAmount);
 
     return (
-        <div className={`cartpopup bg-white fixed top-0 right-0 z-50 w-96 h-full shadow-2xl ${className}`}>
-            <div className='cartpopup__top flex justify-between items-center p-5 bg-dark-blue'>
-                <span className='cartpopup__top__title uppercase font-bold text-xl text-white'>Order cart</span>
+        <div className={`cartpopup bg-white fixed top-0 right-0 z-50 md:w-96 w-full h-full shadow-2xl translate-x-full transition-all duration-500 ease-in-out overflow-hidden ${className}`}>
+            <div className='flex justify-between items-center p-5 bg-dark-blue'>
+                <span className='uppercase font-bold text-xl text-white'>Order cart</span>
                 <FaTimes
                     onClick={onHandleClose}
-                    className='cartpopup__top__close text-2xl text-white cursor-pointer hover:text-pink active:text-dark-pink'
+                    className='text-2xl text-white cursor-pointer hover:text-pink active:text-dark-pink'
                 />
             </div>
-            <div className='cartpopup__center p-4'>
+            <div className='cartpopup__center p-4 overflow-auto h-[calc(100%-17rem)] md:h-[calc(100%-20rem)]'>
                 {cartList.length > 0
                     ?
                     cartList.map((cart, index) => (
@@ -57,16 +57,16 @@ const CartPopup = ({ onHandleClose, className, onHandleViewCart, onHandleCheckou
             </div>
 
             {cartList.length > 0 ?
-                <div className='cart__bot px-8 py-4'>
-                    <div className='cart__bot__subtotal p-4 flex justify-between items-center  border-t border-solid border-slate-700'>
+                <div className='px-8 py-4 h-56'>
+                    <div className='p-4 flex justify-between items-center  border-t border-solid border-slate-700'>
                         <span className='uppercase font-bold'>Total</span>
                         <span className='text-pink font-semibold'>${totalAmount}</span>
                     </div>
-                    <div className='cart__bot__btn'>
-                        <div className="cart__bot__btn__view mb-2 ">
+                    <div>
+                        <div className="mb-2 ">
                             <Link to='/cart' onClick={onHandleViewCart}><ButtonCommon name='View cart' className='w-full' /></Link>
                         </div>
-                        <div className='cart__bot__btn__checkout'>
+                        <div >
                             <Link to='/checkout' onClick={onHandleCheckout}><ButtonCommon name='Check out' className='w-full' /></Link>
                         </div>
                     </div>

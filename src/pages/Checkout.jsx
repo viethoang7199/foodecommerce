@@ -2,7 +2,7 @@ import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { motion } from 'framer-motion';
 import { nanoid } from 'nanoid';
 import React, { useEffect, useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
+import { FaTrashAlt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -80,7 +80,7 @@ const Checkout = () => {
     }
 
     useEffect(() => {
-        // window.scroll(0, 0)
+        window.scroll(0, 0)
     }, [])
 
     // const [values, setValues] = useState([])
@@ -100,11 +100,11 @@ const Checkout = () => {
     return <Helmet title='Checkout'>
         <>
             {loading && <Loading />}
-            <BreadCrumb />
+            <BreadCrumb title='Checkout' />
             <div className='bg-light-gray'>
                 {cartList.length > 0 ? <div className="container py-12 h-auto mx-auto ">
-                    <div className="flex flex-col w-full px-0 mx-auto md:flex-row">
-                        <div className="flex flex-col md:w-3/5 shadow-xl p-6 rounded-xl">
+                    <div className="flex flex-col w-full px-0 mx-auto lg:flex-row">
+                        <div className="flex flex-col lg:w-3/5 shadow-xl p-6 rounded-xl mb-10 lg:mb-0">
                             <h2 className="mb-4 font-bold text-2xl text-heading ">Shipping Address
                             </h2>
                             <form className="justify-center w-full mx-auto" >
@@ -212,7 +212,7 @@ const Checkout = () => {
                                     {cartList.map(cart => (
                                         <div className='flex items-center mb-2 relative' key={cart.id}>
                                             <img
-                                                src={cart.image}
+                                                src={cart.photoURL}
                                                 alt="img"
                                                 className='w-32'
                                             />
@@ -247,8 +247,8 @@ const Checkout = () => {
                                                 whileTap={{ scale: 0.6 }}
                                                 className='absolute top-2 right-2 cursor-pointer'>
                                                 <ButtonCommon
-                                                    className='!p-1'
-                                                    name={<FaTimes />}
+                                                    className='!p-1 !bg-gray-300'
+                                                    name={<FaTrashAlt className='text-xs text-gray-700' />}
                                                     loading={loading}
                                                     onClick={() => removeCartItem(cart.id)}
                                                 />

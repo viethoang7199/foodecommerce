@@ -7,7 +7,7 @@ import { cartSlice } from '../../../../store/Slice/cartSlice';
 import Quantity from '../../../common/Quantity/Quantity';
 
 const CartItem = ({ cartItem }) => {
-    const { id, productName, price, image, discounted, quantity } = cartItem;
+    const { id, productName, price, photoURL, discounted, quantity } = cartItem;
     const dispatch = useDispatch();
 
     const increaseItem = () => {
@@ -16,7 +16,7 @@ const CartItem = ({ cartItem }) => {
                 id,
                 productName,
                 price,
-                image,
+                photoURL,
                 discounted
             })
         );
@@ -41,7 +41,7 @@ const CartItem = ({ cartItem }) => {
                     <FaTimes className='text-sm' onClick={removeCartItem} />
                 </motion.div>
                 <div className='cartitem__item__image w-20 mx-3 flex justify-center items-center'>
-                    <img className='cartitem__item__image-img' src={image} alt={productName} />
+                    <img className='cartitem__item__image-img' src={photoURL} alt={productName} />
                 </div>
 
                 <div className='cartitem__item__content w-full p-4 flex flex-col justify-between'>
